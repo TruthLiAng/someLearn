@@ -1,0 +1,15 @@
+Enable-Migrations -ContextTypeName:ABPDemoWith21.EntityFramework.AppIdentityDbContext -MigrationsDirectory:Migrations\AppIdentityMigrations
+Add-Migration -ConfigurationTypeName ABPDemoWith21.Migrations.AppIdentityMigrations.Configuration InitIdentityDb
+Update-Database  -ConfigurationTypeName ABPDemoWith21.Migrations.AppIdentityMigrations.Configuration
+
+
+Add-Migration -ConfigurationTypeName ABPDemoWith21.Migrations.RmDbMigrations.Configuration -Force Addtable
+Update-Database  -ConfigurationTypeName ABPDemoWith21.Migrations.RmDbMigrations.Configuration
+
+
+
+
+INSERT INTO OLD_MIGRATIONHISTORY
+  (MigrationId, ContextKey, Model, ProductVersion)
+  select *
+    from "__MigrationHistory" t
