@@ -75,6 +75,6 @@ $.fn.myFirstPlugin =function(options){
 <script src="jquery.myplugin.js"></script>
 <script type="text/javascript">
     $(function(){
-        $('a').myPlugin();
+        $('a').myFirstPlugin();
     })
 </script>*/
