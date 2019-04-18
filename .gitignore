@@ -130,3 +130,8 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+
+# vs proj
+bin/
+obj/
+.vs/
